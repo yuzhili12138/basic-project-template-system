@@ -1,5 +1,11 @@
 @use './reset';
 @use './variables';
+
 .app-container {
-  padding: 10px;
+	padding: 10px;
+}
+
+:root {
+	--screen-width: 3840px;
+	--screen-height: 2160px;
 }

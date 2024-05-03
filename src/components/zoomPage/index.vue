@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div class="fit" :style="fitStyle">
+		<!-- 实体层 -->
+		<div class="fit" :style="fitStyle" ref="entityRef">
+			<!-- 缩放层 -->
 			<div class="scaleFit" ref="previewRef">
 				<slot></slot>
 			</div>

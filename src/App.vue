@@ -4,13 +4,11 @@ import { NConfigProvider, NMessageProvider, NDialogProvider, zhCN, dateZhCN } fr
 import Common from '@/components/common/index.vue'
 </script>
 <template>
-	<NConfigProvider>
+	<NConfigProvider :locale="zhCN" :date-locale="dateZhCN">
 		<n-message-provider>
 			<n-dialog-provider>
-				<n-config-provider :locale="zhCN" :date-locale="dateZhCN">
-					<RouterView />
-					<Common />
-				</n-config-provider>
+				<RouterView />
+				<Common />
 			</n-dialog-provider>
 		</n-message-provider>
 	</NConfigProvider>

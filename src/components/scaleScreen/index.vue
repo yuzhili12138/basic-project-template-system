@@ -19,18 +19,18 @@ const { entityRef, previewRef } =
 		: {
 				entityRef: null,
 				previewRef: null
-		  }
+			}
 
 const fitStyle = reactive<any>(
 	SCREEN_ZOOM == 'true'
 		? {
 				height: '100vh',
 				display: 'flex'
-		  }
+			}
 		: {
 				height: 'auto',
 				display: 'block'
-		  }
+			}
 )
 </script>
 <style lang="scss" scoped>

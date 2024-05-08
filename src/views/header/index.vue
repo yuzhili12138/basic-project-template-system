@@ -26,7 +26,6 @@
 const time = ref('')
 // 定义年月日
 const year = ref('')
-
 // 定义方法获取年月日时分秒
 const getTime = () => {
 	// 当前时间

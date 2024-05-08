@@ -4,6 +4,7 @@
 			<Header />
 			<Left />
 			<Right />
+			<MapPop />
 		</div>
 	</div>
 </template>
@@ -11,6 +12,8 @@
 import Header from './header/index.vue'
 import Left from './left/index.vue'
 import Right from './right/index.vue'
+import MapPop from './map/mapPop.vue'
+
 // mock接口
 import { getUserInfoApi } from '@/api/index'
 getUserInfoApi().then((res) => {

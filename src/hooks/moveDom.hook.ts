@@ -1,7 +1,12 @@
 import { ref, onMounted, onUnmounted } from 'vue'
+// 示例
+// <div  ref="chatbox"></div>
+// <div  @mousedown="dragx($event)"></div>
+// 拖动第二个div移动第一个div元素
 export const moveDom = () => {
+	// 被拖动的包围盒
 	const chatbox = ref()
-
+	// 拖动的元素
 	const dragx = (el: any) => {
 		const oDiv = chatbox.value //当前元素
 		const disX = el.clientX - oDiv.offsetLeft

@@ -5,6 +5,7 @@
 		v-bind="modelTableData"
 		@close="modelTableData.show = false"
 		@submit="modelTableData.submit"
+		@update-page="modelTableData.updatePage"
 	/>
 	<NButton @click="modelTableData.show = true" color="red">弹窗按钮</NButton>
 </template>
@@ -75,15 +76,7 @@ const modelTableData: any = reactive({
 			]
 		}
 	],
-	itemCount: 0,
-	tableData: Array.from({ length: 100 }, (v, k) => {
-		return {
-			a: '11',
-			b: '22',
-			c: '33',
-			d: '44'
-		}
-	}),
+	tableData: [],
 	form: {
 		name: '',
 		name2: ''
@@ -92,7 +85,29 @@ const modelTableData: any = reactive({
 	submit: () => {
 		console.log('参数：')
 		console.log(modelTableData.form)
-	}
+	},
+	updatePage: (e: number) => {
+		modelTableData.pagination.page = e
+	},
+	pagination: { page: 1, pageSize: 10, itemCount: 0 }
+})
+
+onMounted(() => {
+	// 模拟请求
+	setTimeout(() => {
+		let obj = {
+			tableData: Array.from({ length: 10 }, (v, k) => {
+				return {
+					a: '11',
+					b: '22',
+					c: '33',
+					d: '44'
+				}
+			}),
+			pagination: { page: 1, pageSize: 10, itemCount: 100 }
+		}
+		Object.assign(modelTableData, obj)
+	}, 3000)
 })
 </script>
 <style lang="scss" scoped></style>

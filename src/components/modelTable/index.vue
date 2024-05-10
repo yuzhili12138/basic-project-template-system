@@ -31,15 +31,18 @@
 					<n-button type="tertiary" size="large" @click="submit"> 确定 </n-button>
 				</div>
 				<NDataTable
+					remote
 					:columns="columns"
 					:data="tableData"
 					:max-height="500"
 					:min-height="500"
+					:pagination="pagination"
 					size="large"
+					@update:page="update"
 				/>
-				<div class="pagin">
+				<!-- <div class="pagin">
 					<n-pagination :item-count="itemCount" @update:page="update" show-quick-jumper />
-				</div>
+				</div> -->
 			</n-card>
 		</div>
 	</NModal>
@@ -47,7 +50,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
-import { NModal, NButton, NPagination, NDataTable, NCard, NInput, NSelect } from 'naive-ui'
+import { NModal, NButton, NDataTable, NCard, NInput, NSelect } from 'naive-ui'
 
 // 定义prop数据类型
 interface FormRules {
@@ -63,7 +66,7 @@ interface Props {
 	formRules: FormRules[] | []
 	columns?: any
 	tableData?: any
-	itemCount?: number
+	pagination?: any
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -75,17 +78,16 @@ const props = withDefaults(defineProps<Props>(), {
 	formRules: () => [],
 	columns: [],
 	tableData: [],
-	// 总条数
-	itemCount: 0
+	pagination: {}
 })
 // 筛选条件参数
 const formModel: any = defineModel('form', {
 	required: false,
 	type: Object
 })
-const { columns, tableData } = toRefs(props)
-const domRef = ref()
+const { columns, tableData, pagination } = toRefs(props)
 
+const domRef = ref()
 onMounted(() => {
 	domRef.value = document.getElementById('scaleFit')
 })

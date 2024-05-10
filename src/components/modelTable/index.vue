@@ -80,7 +80,8 @@ const props = withDefaults(defineProps<Props>(), {
 })
 // 筛选条件参数
 const formModel: any = defineModel('form', {
-	required: false
+	required: false,
+	type: Object
 })
 const { columns, tableData } = toRefs(props)
 const domRef = ref()

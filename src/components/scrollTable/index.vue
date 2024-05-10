@@ -68,7 +68,6 @@ const props: any = defineProps({
 })
 const { hoverStyle, height, columns, data }: any = toRefs(props)
 const { background, border } = toRefs(hoverStyle.value)
-console.log(background)
 const length = columns.value.length
 
 const lineClick = (item: any) => {}

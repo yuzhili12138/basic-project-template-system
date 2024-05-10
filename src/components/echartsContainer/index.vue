@@ -36,9 +36,7 @@ onMounted(() => {
 	if (chartBox.value) {
 		myChart = initChart(chartBox.value, options.value)
 		// 事件绑定
-		myChart.on('click', function (params) {
-			console.log(params)
-		})
+		myChart.on('click', function (params) {})
 		myChart.on('mouseover', (params) => {
 			controlAnimate = false
 		})
@@ -47,7 +45,6 @@ onMounted(() => {
 		})
 
 		if (tooltipAnimation.value) {
-			console.log('onMounted的状态')
 			chartAnimation()
 		}
 
@@ -78,8 +75,6 @@ watch(
 watch(
 	() => props.tooltipAnimation,
 	() => {
-		console.log('改变')
-
 		chartAnimation()
 	}
 )

@@ -12,14 +12,14 @@
 							<div>
 								<n-input
 									size="large"
-									v-model:value="form[item.key]"
+									v-model:value="formModel[item.key]"
 									clearable
 									v-if="item.type == 'input'"
 								/>
 								<n-select
 									:to="false"
 									:options="item.options"
-									v-model:value="form[item.key]"
+									v-model:value="formModel[item.key]"
 									style="width: 200px"
 									size="large"
 									clearable
@@ -71,8 +71,6 @@ const props = withDefaults(defineProps<Props>(), {
 	title: '',
 	// 展示
 	show: false,
-	// 筛选条件参数
-	form: {},
 	// 筛选条件规则
 	formRules: () => [],
 	columns: [],
@@ -80,9 +78,11 @@ const props = withDefaults(defineProps<Props>(), {
 	// 总条数
 	itemCount: 0
 })
-
-const { columns, tableData, form } = toRefs(props)
-
+// 筛选条件参数
+const formModel: any = defineModel('form', {
+	required: false
+})
+const { columns, tableData } = toRefs(props)
 const domRef = ref()
 
 onMounted(() => {

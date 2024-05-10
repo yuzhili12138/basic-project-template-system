@@ -1,8 +1,12 @@
 <template>
-	<div class="menuLeft"></div>
+	<div class="menuLeft">
+		<Examples />
+	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Examples from '../examples/index.vue'
+</script>
 <style lang="scss" scoped>
 .menuLeft {
 	position: absolute;

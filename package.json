@@ -57,7 +57,8 @@
 		"vite-plugin-fake-server": "^2.1.1",
 		"vite-plugin-mock": "^2.9.8",
 		"vue": "^3.4.21",
-		"vue-router": "^4.3.0"
+		"vue-router": "^4.3.0",
+		"vue3-seamless-scroll": "^2.0.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.2.0",

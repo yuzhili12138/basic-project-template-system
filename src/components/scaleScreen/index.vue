@@ -3,7 +3,7 @@
 		<!-- 实体层 -->
 		<div class="fit" :style="fitStyle" ref="entityRef">
 			<!-- 缩放层 -->
-			<div class="scaleFit" ref="previewRef">
+			<div class="scaleFit" id="scaleFit" ref="previewRef">
 				<slot></slot>
 			</div>
 		</div>

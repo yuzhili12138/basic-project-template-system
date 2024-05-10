@@ -24,16 +24,11 @@ getUserInfoApi().then((res) => {
 .wrapper {
 	width: var(--screen-width);
 	height: var(--screen-height);
-	background-image: url('@/assets/imgs/mengceng.png');
-	background-size: 100% 100%;
-	transform-origin: center center;
 }
 
 .pageWrapper {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: url('@/assets/imgs/border.png');
-	background-size: 100% 100%;
 }
 </style>

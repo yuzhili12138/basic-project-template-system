@@ -8,7 +8,6 @@
 
 <script lang="ts" setup>
 import { moveDom } from '@/hooks/moveDom.hook'
-
 const { chatbox, dragx } = moveDom()
 </script>
 <style lang="scss" scoped>
@@ -19,10 +18,7 @@ const { chatbox, dragx } = moveDom()
 	align-items: center;
 	justify-content: center;
 	margin: auto;
-	pointer-events: none;
-	user-select: none; /* webkit浏览器 */
-	user-select: none; /* 火狐 */
-	user-select: none; /* IE10 */
+	pointer-events: none; /* webkit浏览器 */ /* 火狐 */ /* IE10 */
 	user-select: none;
 
 	.canMove {

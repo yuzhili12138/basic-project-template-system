@@ -21,3 +21,5 @@ window.$dialog.warning({
 - [ESLint+Prettier+Stylelint+EditorConfig 约束和统一前端代码规范](https://blog.csdn.net/u013737132/article/details/130190788)
 - [Husky + Lint-staged + Commitlint + Commitizen + cz-git 配置 Git 提交规范](https://blog.csdn.net/u013737132/article/details/130191363)
 - [unocss](https://uno.antfu.me/)
+
+- windows电脑 提交代码如果是CRLF 需要设置 git config --global core.autocrlf false

@@ -106,7 +106,7 @@ const submit = () => {
 	emits('submit')
 }
 </script>
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 .modelBox {
 	box-sizing: border-box;
 	width: 1400px !important;

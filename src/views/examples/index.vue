@@ -1,13 +1,15 @@
 <template>
-	<div class="font35 color-red-4">示例页面 examples/index.vue</div>
-	<ScrollTable v-bind="scrollTableData" />
-	<ModelTable
-		v-bind="modelTableData"
-		@close="modelTableData.show = false"
-		@submit="modelTableData.submit"
-		@update-page="modelTableData.updatePage"
-	/>
-	<NButton @click="modelTableData.show = true" color="red">弹窗按钮</NButton>
+	<div style="width: 100%">
+		<div class="font35 color-red-4">示例页面 examples/index.vue</div>
+		<ScrollTable v-bind="scrollTableData" />
+		<ModelTable
+			v-bind="modelTableData"
+			@close="modelTableData.show = false"
+			@submit="modelTableData.submit"
+			@update-page="modelTableData.updatePage"
+		/>
+		<NButton @click="modelTableData.show = true" color="red">弹窗按钮</NButton>
+	</div>
 </template>
 
 <script lang="ts" setup>

@@ -1,11 +1,5 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { NConfigProvider, NMessageProvider, NDialogProvider, zhCN, dateZhCN } from 'naive-ui'
-import Common from '@/components/common/index.vue'
-import ScaleScreen from '@/components/scaleScreen/index.vue'
-</script>
 <template>
-	<NConfigProvider :locale="zhCN" :date-locale="dateZhCN">
+	<NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="darkTheme">
 		<n-message-provider>
 			<n-dialog-provider>
 				<ScaleScreen>
@@ -16,3 +10,16 @@ import ScaleScreen from '@/components/scaleScreen/index.vue'
 		</n-message-provider>
 	</NConfigProvider>
 </template>
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import {
+	NConfigProvider,
+	NMessageProvider,
+	NDialogProvider,
+	zhCN,
+	dateZhCN,
+	darkTheme
+} from 'naive-ui'
+import Common from '@/components/common/index.vue'
+import ScaleScreen from '@/components/scaleScreen/index.vue'
+</script>

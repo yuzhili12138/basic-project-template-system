@@ -9,6 +9,12 @@
 			@update-page="modelTableData.updatePage"
 		/>
 		<NButton @click="modelTableData.show = true" color="red">弹窗按钮</NButton>
+		<div style="width: 800px; height: 500px">
+			<EchartsContainer :options="getOptions1()" />
+		</div>
+		<div style="width: 800px; height: 500px; margin: 20px 0">
+			<EchartsContainer :options="getOptions2()" />
+		</div>
 	</div>
 </template>
 
@@ -16,6 +22,8 @@
 import ScrollTable from '@/components/scrollTable/index.vue'
 import ModelTable from '@/components/modelTable/index.vue'
 import { NButton } from 'naive-ui'
+import EchartsContainer from '@/components/echartsContainer/index.vue'
+import { getOptions1, getOptions2 } from './data'
 const scrollTableData = reactive({
 	height: 300,
 	columns: [

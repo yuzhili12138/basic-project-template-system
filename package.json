@@ -58,6 +58,7 @@
 		"vite-plugin-mock": "^2.9.8",
 		"vue": "^3.4.21",
 		"vue-router": "^4.3.0",
+		"vue3-scroll-seamless": "^1.0.6",
 		"vue3-seamless-scroll": "^2.0.1"
 	},
 	"devDependencies": {

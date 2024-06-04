@@ -10,7 +10,14 @@
 				</div>
 			</div>
 			<div class="tBorder" :style="{ height: height + 'px' }">
-				<vue3-seamless-scroll :list="data" hover :step="0.5">
+				<vue3ScrollSeamless
+					:dataList="data"
+					:classOptions="{
+						waitTime: 2500,
+						hoverStop: false,
+						singleHeight: 60
+					}"
+				>
 					<div v-for="(item, index) in data" :key="item.code" class="border">
 						<div>
 							<img src="./images/ju1.png" class="jupng" />
@@ -29,14 +36,14 @@
 							</template>
 						</div>
 					</div>
-				</vue3-seamless-scroll>
+				</vue3ScrollSeamless>
 			</div>
 		</div>
 	</div>
 </template>
 <script setup lang="ts">
 import Render from './render'
-import { Vue3SeamlessScroll } from 'vue3-seamless-scroll'
+import { vue3ScrollSeamless } from 'vue3-scroll-seamless'
 import { toRefs } from 'vue'
 
 const props: any = defineProps({
